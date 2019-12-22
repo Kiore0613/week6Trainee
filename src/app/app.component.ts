@@ -1,3 +1,5 @@
+import { dateData } from './../models/mock-date';
+import { DateInterface } from './../models/date.interface';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'week6Trainee';
+
+  pyum: DateInterface[] = dateData;
+
+  printDates() {
+    if (this.pyum.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
