@@ -1,12 +1,6 @@
-<div *ngIf="printDates() === true; then pyumList else noPyum"></div>
-<ng-template #pyumList>
-  List of Pyum <br>
-  <div *ngFor="let pyumItem of pyum">
-    {{pyumItem.nameOfDate}} <br>
-    {{pyumItem.date}} <br>
-    {{pyumItem.totalHours}} <br>
-  </div>
-</ng-template>
-<ng-template #noPyum>
+<div [hidden]="printDates() == false">
+  List of Pyum
+</div>
+<div [hidden]="printDates() == true">
   No Pyum yet
-</ng-template>
+</div>

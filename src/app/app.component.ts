@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'week6Trainee';
 
-  pyum: DateInterface[] = dateData;
+  pyum = [1, 2, 3];
 
   printDates() {
     if (this.pyum.length > 0) {
